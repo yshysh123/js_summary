@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>13</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" charset="utf-8">
+    // 1
+    alert(0/0);
+
+    // 2
+    alert(1/0);
+
+    // 3
+    var arr = [1,'abc',function(){alert(3333);}];
+    alert(arr[2]());
+    arr[2]();
+
+    // 4
+    var len = 4;
+    while(len--){
+            setTimeout(function(){console.log(len)},3000);
+            console.log(len);
+    }
+
+    // 5
+    window.name = "Window";
+    var cat = {
+            name:'Cat'
+    };
+    var dog = {
+            name:'Dog',
+            sound:function(word){
+                alert(this.name + word);
+            }
+    };
+    dog.sound("is pooping");
+    dog.sound.call(window,"is banking");
+    dog.sound.call(dog,"is banking");
+    dog.sound.apply(cat,['李鹏']);
+
+</script>
+</html>

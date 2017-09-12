@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>7</title>
+</head>
+<body>
+    给定一些文档（docs）、词（words），
+    找出词在文档中全部存在的所有文档
+</body>
+<script type="text/javascript" charset="utf-8">
+    var docs = [
+        {
+            id: 1,
+            words: ['hello',"world"]
+        },
+        {
+            id: 2,
+            words: ['hello',"kids"]
+        },
+        {
+            id: 3,
+            words: ['zzzz',"hello"]
+        },
+        {
+            id: 4,
+            words: ['world',"kids"]
+        }
+    ];
+    console.log(findDocList(docs,['hello'])) //文档1，文档2，文档3
+    findDocList(docs,['hello','world']) //文档1
+    var str = '';
+    function findDocList(docs,arr){
+    	docs.forEach((e,i)=>{
+    		for(var j=0;j<arr.length;j++){
+    			if(arr[j]==e){
+    				str+='文档'+i;
+    			}
+    		}
+    	})
+    }
+</script>
+</html>

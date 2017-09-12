@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>8</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" charset="utf-8">
+    var test = (function(a){
+        this.a = a;
+        return function(b){
+            return this.a + b;
+        }
+    }(function(a,b){
+        return a;
+    }(2,5)));
+    console.log(test(1));
+</script>
+</html>

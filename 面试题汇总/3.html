@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str = '发我快乐反甲开了我周永康反甲开了文件发看来我习近平反甲看玩家6.4发几万可见中共'
+			var newStr = str.replace(/(习近平)|(周永康)|(中共)|(6.4)/g,function($1) {
+				console.log($1)
+				return `<span style='color: red;'>${$1}</span>`;
+			});
+			document.write(newStr)
+		</script>
+	</body>
+</html>
